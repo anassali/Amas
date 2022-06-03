@@ -1,8 +1,3 @@
-from os import listdir, mkdir
+from VCsMusicBot.services.downloaders import youtube
 
-if "raw_files" not in listdir():
-    mkdir("raw_files")
-
-from VCsMusicBot.services.converter.converter import convert
-
-__all__ = ["convert"]
+__all__ = ["youtube"]
