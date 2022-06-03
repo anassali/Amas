@@ -1,4 +1,8 @@
-from VCsMusicBot.services.queues import queues
-from VCsMusicBot.services.callsmusic.callsmusic import pytgcalls, run
+from os import listdir, mkdir
 
-__all__ = ["queues", "pytgcalls", "run"]
+if "raw_files" not in listdir():
+    mkdir("raw_files")
+
+from VCsMusicBot.services.converter.converter import convert
+
+__all__ = ["convert"]
